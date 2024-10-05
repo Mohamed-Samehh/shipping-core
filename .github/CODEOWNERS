@@ -1,0 +1,16 @@
+# Default ownership — every PR is reviewed by the shipping-core team.
+
+*       @helix/shipping-core-maintainers
+
+# Sensitive areas with stricter review.
+
+src/lib/signature.ts                       @helix/security
+src/lib/jwt.ts                             @helix/security
+src/services/webhook-service.ts            @helix/security
+src/services/customs-service.ts            @helix/customs @helix/security
+src/services/manifest-service.ts           @helix/operations
+
+# Build / CI.
+
+Dockerfile              @helix/platform
+.github/workflows/      @helix/platform
