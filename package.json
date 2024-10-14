@@ -1,6 +1,6 @@
 {
   "name": "@helix/shipping-core",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "private": true,
   "description": "Shipping and dispatch primitives for the Helix fulfilment platform. Provides carriers, services, rates, shipments, labels, manifests, tracking, customs, returns, pickups and webhook delivery on top of an in-memory persistence stack suitable for tests and lightweight deployments.",
   "license": "MIT",
