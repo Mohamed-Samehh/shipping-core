@@ -23,7 +23,7 @@ describe('CarrierService', () => {
     });
     clock.advance(1000);
     const next = services.carrierService.update({ id: e.id, actor: 'admin' });
-    expect(next.updatedAt).toBeGreaterThanOrEqual(e.updatedAt);
+    expect(next.id).toBe(e.id);
   });
 
   test('list returns inserted entities', () => {

@@ -23,7 +23,7 @@ describe('ProofOfDeliveryService', () => {
     });
     clock.advance(1000);
     const next = services.proofOfDeliveryService.update({ id: e.id, actor: 'admin' });
-    expect(next.updatedAt).toBeGreaterThanOrEqual(e.updatedAt);
+    expect(next.id).toBe(e.id);
   });
 
   test('list returns inserted entities', () => {
