@@ -19,18 +19,30 @@ export * from './lib/time';
 export * from './lib/currency';
 export * from './lib/decimal';
 export * from './lib/money';
-export * from './lib/percentage';
+export {
+  type BasisPoints,
+  bps, fromPercent, toPercent,
+  applyBps, markup, discount as discountBps, compound, clampBps,
+} from './lib/percentage';
 export * from './lib/concurrency';
 export * from './lib/events';
 export * from './lib/pagination';
 export * from './lib/validate';
 export * from './lib/sort';
 export * from './lib/group';
-export * from './lib/range';
+export {
+  type IntRange,
+  range, contains as rangeContains, overlaps, intersection,
+  iterate, size as rangeSize, clamp as clampRange,
+} from './lib/range';
 export * from './lib/workflow';
 export * from './lib/queue';
 export * from './lib/csv';
-export * from './lib/template';
+export {
+  render as renderTemplate,
+  extractVariables as extractTemplateVariables,
+  type RenderOptions,
+} from './lib/template';
 export * from './lib/metrics';
 export * from './lib/tracing';
 export * from './lib/feature-flags';
@@ -39,9 +51,16 @@ export * from './lib/diff';
 export * from './lib/url';
 export * from './lib/idempotency';
 export * from './lib/string';
-export * from './lib/maths';
+export {
+  clamp as clampNumber,
+  lerp, ceilToStep, floorToStep, roundHalfEven,
+  sum as sumNumbers, average, median, gcd, lcm,
+} from './lib/maths';
 export * from './lib/ulid';
-export * from './lib/cron';
+export {
+  parseCron, matches as matchesCron, nextAfter as nextCronAfter,
+  type CronSchedule,
+} from './lib/cron';
 export * from './lib/jwt';
 export * from './lib/deferred';
 export * from './lib/throttle';
@@ -50,18 +69,29 @@ export * from './lib/env';
 export * from './lib/safe-json';
 export * from './lib/duration';
 export * from './lib/iban';
-export * from './lib/compose';
+export {
+  pipe, compose as composeFns,
+  identity, constant, tap, memoize,
+} from './lib/compose';
 export * from './lib/async-iter';
 export * from './lib/locale';
 export * from './lib/luhn';
 export * from './lib/email';
 export * from './lib/phone';
 export * from './lib/exp-backoff';
-export * from './lib/url-template';
+export {
+  expand as expandUrlTemplate,
+  extractVariables as extractUrlTemplateVariables,
+  appendQuery,
+} from './lib/url-template';
 export * from './lib/prorate';
 export * from './lib/recurrence';
 export * from './lib/weight';
-export * from './lib/dimensions';
+export {
+  dimensions, girth, lengthPlusGirth, volumeMm3, longestSide,
+  toUnit as dimensionsToUnit, isOversize,
+  type Dimensions, type DimensionUnit,
+} from './lib/dimensions';
 export * from './lib/dim-weight';
 export * from './lib/postal-code';
 export * from './lib/country';
