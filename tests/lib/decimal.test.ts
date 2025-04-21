@@ -7,8 +7,8 @@ describe('decimal', () => {
   });
 
   test('rescale half-even rounding', () => {
-    expect(decimalToString(rescale(decimal('2.5', 0), 0))).toBe('2');
-    expect(decimalToString(rescale(decimal('3.5', 0), 0))).toBe('4');
+    expect(decimalToString(rescale(decimal('2.5'), 0))).toBe('2');
+    expect(decimalToString(rescale(decimal('3.5'), 0))).toBe('4');
   });
 
   test('dadd and dsub align scales', () => {
