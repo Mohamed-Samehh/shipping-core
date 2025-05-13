@@ -98,6 +98,15 @@ export * from './lib/country';
 export * from './lib/distance';
 export * from './lib/hs-code';
 export * from './lib/barcode';
+export * from './lib/transit-time';
+export {
+  type CarrierLimits,
+  type ValidationFailure as CarrierValidationFailure,
+  limitsFor, validate as validateCarrierLimits, isUsable as carrierIsUsable,
+  supportedCarriers,
+} from './lib/carrier-rules';
+export * from './lib/mail-class';
+export * from './lib/zone-lookup';
 
 export * from './domain/address';
 export * from './domain/carrier';
